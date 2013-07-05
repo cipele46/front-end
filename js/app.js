@@ -3,9 +3,7 @@ var app = (function($, window, document, undefined) {
 	var $window = $(window),
 		$document = $(document);
 	
-	var _pageInit = function() {
-        console.log("app start");
-        
+	var _pageInit = function() { 
         _cardBoardInit();
 	};
 	
@@ -33,9 +31,7 @@ var app = (function($, window, document, undefined) {
         });
         
         $(".cards-board").isotope({
-            itemSelector: "article.card",
-			layoutMode: "masonry",
-			resizable: true
+            itemSelector: "article.card"
         });
         
         function handleCardFavorites(card, favIcon){
@@ -51,9 +47,7 @@ var app = (function($, window, document, undefined) {
         
 	};
 	
-	var _innerPageInit = function() {
-		_pageInit();
-	};
+	
 	
 	var _formInit = function() {
     	jQuery.extend(jQuery.validator.messages, {
