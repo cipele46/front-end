@@ -22,7 +22,21 @@ var app = (function($, window, document, undefined) {
             else {
                window.location = $(this).data().details; 
             }
-        })
+        });
+        
+        $("#cards-board-filter-nav > li > a").on("click", function(event){
+            event.preventDefault();
+           
+            var $li = $(this).parent();
+            
+            $li.toggleClass("expanded"); 
+        });
+        
+        $(".cards-board").isotope({
+            itemSelector: "article.card",
+			layoutMode: "masonry",
+			resizable: true
+        });
         
         function handleCardFavorites(card, favIcon){
             var $card = card,

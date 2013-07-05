@@ -43,57 +43,59 @@
 </header>
 <div class="page-content-wrapper clearfix">
     <aside class="page-sidebar">
-        <ul>
-            <li>
-                <a href="#">Moj kutak</a>
-                <ul>
-                    <li><a href="#">Moji oglasi</a></li>
-                    <li><a href="#">Moji favoriti</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Vrsta oglasa</a>
-                <ul>
-                    <li><a href="#">Svi oglasi</a></li>
-                    <li><a href="#">Ponuda</a></li>
-                    <li><a href="#">Potražnja</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Kategorije</a>
-                <ul>
-                    <li><a href="#">Sve kategorije</a></li>
-                    <li><a href="#">Hrana</a></li>
-                    <li><a href="#">Zdravlje i higijena</a></li>
-                    <li><a href="#">Namještaj</a></li>
-                    <li><a href="#">Poslovi i suluge</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Županije</a>
-                <ul>
-                    <li><a href="#">Sve županije</a></li>
-                    <li><a href="#">Koprivničko-križevačka</a></li>
-                    <li><a href="#">Brodsko-posavska (3)</a></li>
-                    <li><a href="#">Dubrovačko-neretvanska (3)</a></li>
-                    <li><a href="#">Grad Zagreb (3)</a></li>
-                    <li><a href="#">Istarska (3)</a></li>
-                    <li><a href="#">Karlovačka (3)</a></li>
-                </ul>
-            </li>
-        </ul>
+        <nav class="cards-board-filter">
+            <ul id="cards-board-filter-nav">
+                <li class="expanded">
+                    <a href="#">Moj kutak</a>
+                    <ul>
+                        <li><a href="#">Moji oglasi (3)</a></li>
+                        <li><a href="#">Moji favoriti (123)</a></li>
+                    </ul>
+                </li>
+                <li class="expanded">
+                    <a href="#">Vrsta oglasa</a>
+                    <ul>
+                        <li class="current"><a href="#">Svi oglasi (23)</a></li>
+                        <li class="giving"><a href="#">Ponuda (333)</a></li>
+                        <li class="receiving"><a href="#">Potražnja (34)</a></li>
+                    </ul>
+                </li>
+                <li class="expanded">
+                    <a href="#">Kategorije</a>
+                    <ul>
+                        <li><a href="#">Sve kategorije (33)</a></li>
+                        <li><a href="#">Hrana (345)</a></li>
+                        <li><a href="#">Zdravlje i higijena (34)</a></li>
+                        <li class="current"><a href="#">Namještaj (53)</a></li>
+                        <li><a href="#">Poslovi i suluge (37)</a></li>
+                    </ul>
+                </li>
+                <li class="expanded">
+                    <a href="#">Županije</a>
+                    <ul>
+                        <li><a href="#">Sve županije</a></li>
+                        <li class="current"><a href="#">Koprivničko-križevačka (33)</a></li>
+                        <li><a href="#">Brodsko-posavska (23)</a></li>
+                        <li><a href="#">Dubrovačko-neretvanska (63)</a></li>
+                        <li><a href="#">Grad Zagreb (37)</a></li>
+                        <li><a href="#">Istarska (83)</a></li>
+                        <li><a href="#">Karlovačka (39)</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </aside>
     <div class="page-content">
         <header class="page-content-header clearfix">
             <ul class="breadcrumbs clearfix">
-                <li><a href="#">Sve kategorije</a></li>
+                <li><a href="#">Namještaj</a></li>
                 <li><span>Koprivničko-križevačka županija</span></li>
             </ul>
             <div class="cards-counter clearfix"><strong>315</strong> oglasa</div>
         </header>
         
         <section class="cards-board clearfix">
-            <article class="card giving-card" data-details="card_detail.html">
+            <article class="card giving" data-details="card_detail.html">
                 <figure class="icon window-2"><img src="assets/data/images/card_image_2.jpg" alt="card_image_2" width="260"></figure>
                 <h2><a href="card_detail.html">Poklanjam starinski namještaj kauč, fotelju i komodu</a></h2>
                 <p>Poklanjam očuvani starinski namještaj radi preseljenja. Mogućnost preuzimanja u komadu ili pojedinačno. Dostava nije ...</p>
@@ -105,7 +107,7 @@
                 </footer>
             </article>
             
-            <article class="card receiving-card" data-details="card_detail.html">
+            <article class="card receiving" data-details="card_detail.html">
                 <figure class="icon window-2"><img src="assets/data/images/card_image_1.jpg" alt="card_image_1" width="260"></figure>
                 <h2><a href="card_detail.html">Poklanjam perilicu</a></h2>
                 <p>Poklanjam izraubanu vešmašinu za veš!</p>
@@ -117,7 +119,7 @@
                 </footer>
             </article>
             
-            <article class="card giving-card" data-details="card_detail.html">
+            <article class="card giving" data-details="card_detail.html">
                 <h2><a href="card_detail.html">Poklanjam starinski namještaj kauč, fotelju i komodu</a></h2>
                 <footer>
                     <span class="card-place icon stroke location">Koprivničko-križevačka županija</span>
@@ -127,7 +129,7 @@
                 </footer>
             </article>
             
-            <article class="card giving-card" data-details="card_detail.html">
+            <article class="card giving" data-details="card_detail.html">
                 <figure class="icon window-2"><img src="assets/data/images/card_image_1.jpg" alt="card_image_1" width="260"></figure>
                 <h2><a href="card_detail.html">Poklanjam perilicu</a></h2>
                 <p>Poklanjam izraubanu vešmašinu za veš!</p>
@@ -139,7 +141,7 @@
                 </footer>
             </article>
             
-            <article class="card receiving-card" data-details="card_detail.html">
+            <article class="card receiving" data-details="card_detail.html">
                 <h2><a href="card_detail.html">Htio bih novu kosilicu!</a></h2>
                 <p>Ako ima netko, treba mi za vikendicu trofazna kosilica za travu!?<br>Hitno!</p>
                 <footer>
@@ -150,7 +152,7 @@
                 </footer>
             </article>
             
-            <article class="card giving-card" data-details="card_detail.html">
+            <article class="card giving" data-details="card_detail.html">
                 <figure class="icon window-2"><img src="assets/data/images/card_image_1.jpg" alt="card_image_1" width="260"></figure>
                 <h2><a href="card_detail.html">Poklanjam perilicu</a></h2>
                 <p>Poklanjam izraubanu vešmašinu za veš!</p>
@@ -182,6 +184,7 @@
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/jquery.csssupport.js"></script>
 <script src="assets/js/jquery.cookie.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
 <script src="assets/js/jquery.forms.js"></script>
 <script src="assets/js/jquery.forms.validate.js"></script>
 <script src="js/app.js"></script>

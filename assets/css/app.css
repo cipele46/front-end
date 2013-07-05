@@ -1,10 +1,10 @@
 /*  
     Color definitions
     page background:    #fff1d8
-    orange:             #f4715b
     element border:     #ccc
-    receive blue:       #17c1c7
-    give red:           #f4715b
+    orange:             #f4715b
+    receiving blue:     #17c1c7
+    giving red:         #f4715b
 */
 
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&subset=latin,latin-ext);
@@ -128,10 +128,8 @@ button {
 }
 .page-sidebar {
     float: left;
-    font-size: 1.6em;
-    width: 260px;
+    width: 300px;
     margin: 50px 10px 10px;
-    padding: 20px;
 }
 .page-content {
     float: right;
@@ -338,7 +336,94 @@ button {
 /* Board 
 ***************************************************************/
 /* Board navigation */
+.cards-board-filter {
+    
+}
+.cards-board-filter li {
+    margin-bottom: 10px;
+}
+.cards-board-filter > ul > li {
+    margin-bottom: 20px;
+}
+.cards-board-filter > ul > li ul {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: none;
+}
+.cards-board-filter > ul > li.expanded ul {
+    display: block;
+}
+.cards-board-filter a:link,
+.cards-board-filter a:visited {
+    display: block;
+    font-size: 1.6em;
+    color: #444;
+    position: relative;
+    -webkit-transition: color .1s linear;  
+	-moz-transition: color .1s linear;  
+	-o-transition: color .1s linear;  
+	transition:  color .1s linear;
+}
+.cards-board-filter a:hover,
+.cards-board-filter a:active,
+.cards-board-filter a:focus,
+.cards-board-filter li.current a:link,
+.cards-board-filter li.current a:visited {
+    color: #f4715b;
+}
 
+.cards-board-filter > ul > li > a:link,
+.cards-board-filter > ul > li > a:visited {
+    text-transform: uppercase;
+    color: #212121;
+    font-size: 2em;
+}
+.cards-board-filter > ul > li > a:hover,
+.cards-board-filter > ul > li > a:active,
+.cards-board-filter > ul > li > a:focus {
+    color: #000;
+}
+.cards-board-filter > ul > li > a:after {
+    font-family: "Flaticons Stroke";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 15px;
+    content: "\e5a5";
+    color: #ccc;
+    font-size: 20px;
+    margin-left: 2px;
+    -webkit-transition: color .1s linear;  
+	-moz-transition: color .1s linear;  
+	-o-transition: color .1s linear;  
+	transition:  color .1s linear;
+}
+.cards-board-filter > ul > li.expanded > a:after {
+    content: "\e5a4";
+}
+.cards-board-filter > ul > li:hover > a:after {
+    color: #212121;
+}
+
+.cards-board-filter li.giving a:after,
+.cards-board-filter li.receiving a:after {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: -18px;
+    top: 6px;
+    content: " ";
+    -moz-border-radius: 50%;
+  	-webkit-border-radius: 50%;
+  	border-radius: 50%;
+}
+.cards-board-filter li.giving a:after {
+    background: #f4715b;         
+}
+.cards-board-filter li.receiving a:after {
+    background: #17c1c7;
+}
 
 /* Board header */
 .page-content-header {
@@ -388,6 +473,9 @@ button {
 .cards-pager li {
     float: left;
     margin: 0 5px;
+}
+.cards-pager li:first-child {
+    margin-left: 0;
 }
 .cards-pager li a:link,
 .cards-pager li a:visited,
@@ -491,29 +579,29 @@ button {
     width: 100%;
 }
 
-.card.giving-card {
+.card.giving {
     border-top-color: #17c1c7;
 }
-.card.giving-card:hover h2,
-.card.giving-card:hover h2 a:link,
-.card.giving-card:hover h2 a:visited,
-.card.giving-card:hover footer {
+.card.giving:hover h2,
+.card.giving:hover h2 a:link,
+.card.giving:hover h2 a:visited,
+.card.giving:hover footer {
     color: #17c1c7;
 }
-.card.giving-card:hover footer {
+.card.giving:hover footer {
     border-color: #17c1c7;
 }
 
-.card.receiving-card {
+.card.receiving {
     border-top-color: #f4715b
 }
-.card.receiving-card:hover h2,
-.card.receiving-card:hover h2 a:link,
-.card.receiving-card:hover h2 a:visited,
-.card.receiving-card:hover footer {
+.card.receiving:hover h2,
+.card.receiving:hover h2 a:link,
+.card.receiving:hover h2 a:visited,
+.card.receiving:hover footer {
     color: #f4715b;
 }
-.card.receiving-card:hover footer {
+.card.receiving:hover footer {
     border-color: #f4715b
 } 
 
@@ -572,6 +660,68 @@ a.card-favorite.selected:visited:before {
     color: #ffd33d;
 } 
   
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
 
 /* Forms */
 /**************************************************************/
