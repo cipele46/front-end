@@ -5,22 +5,43 @@ var app = (function($, window, document, undefined) {
 	
 	var _pageInit = function() {
         console.log("app start");
+        
+        _cardBoardInit();
+	};
+	
+	var _cardBoardInit = function() {
+        
+        $("article.card").on("click", function(event){
+            event.preventDefault();
+            
+            var $eventTarget = $(event.target);
+            
+            if($eventTarget.is("a.card-favorite")) {
+                handleCardFavorites($(this), $eventTarget); 
+            } 
+            else {
+               window.location = $(this).data().details; 
+            }
+        })
+        
+        function handleCardFavorites(card, favIcon){
+            var $card = card,
+                $favIcon = favIcon;
+            
+            $favIcon.toggleClass("selected");
+                
+            $favIcon.prop("title", ($favIcon.is(".selected")) ? $favIcon.data().remove : $favIcon.data().add);
+            
+            // TODO: Card Favorites Functionality
+        };
+        
 	};
 	
 	var _innerPageInit = function() {
 		_pageInit();
-		
-        $("section.offer-details-images a").magnificPopup({
-            type: "image",
-            gallery:{
-                enabled:true
-            }
-        });
 	};
 	
-	var _contactInit = function() {
-    	_innerPageInit();
-    	
+	var _formInit = function() {
     	jQuery.extend(jQuery.validator.messages, {
     		required: "Obavezno polje",
     		email: "Molimo unesite ispravnu e-mail adresu",
@@ -33,19 +54,6 @@ var app = (function($, window, document, undefined) {
     			$("label.error").attr("title", function() {return $(this).text();});
     		}
     	});
-    	
-    	setTimeout(function(){
-            $("#contact-form-success").addClass("flip");
-		}, 5000);
-	};
-	
-	var _homePageInit = function() {
-		_pageInit();
-		
-		//	Handle home page slider 
-		window.slider = window.setTimeout(function(){
-			$("#homepage-slider div.slider-content").slider();
-		}, 100);
 	};
 	
 	return {
