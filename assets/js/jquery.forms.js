@@ -45,6 +45,8 @@ $("input[type=checkbox], input[type=radio]").checkBox(); // Replace all checkbox
             		});
             		
             		$label.addClass(checkedClass);
+            		console.log($( this ).attr("id"));
+            		console.log("Change view!");
             	}
             });
             
