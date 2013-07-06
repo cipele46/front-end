@@ -432,10 +432,6 @@ button {
 	margin-right:20px;
 }
 
-.page-sidebar .sidebar-number-color-blue:before {
-    color: #17c1c7 !important;
-}
-
 
 .page-sidebar .sidebar-email {
 	color:#777777;
@@ -521,9 +517,6 @@ button {
 	margin-top: 20px;
 	border: 0px;
 	text-align: center;
-}
-.page-sidebar a.sidebar-button-color-blue:link{
-	background: #17c1c7 !important;
 }
 
 .page-sidebar a.sidebar-button-gray:link{
@@ -1019,12 +1012,23 @@ a.card-favorite.selected:visited {
     padding: 20px;
 }
 
-.top-border-color-blue {
+
+body div.supply section,body div.supply .page-sidebar {
 	border-top-color: #17c1c7 !important;
 }
-.color-blue {
+
+body div.supply .page-sidebar h3, body div.supply .sidebar-number,body div.supply .sidebar-number:before,body div.supply .sidebar-email:before{
 	color: #17c1c7 !important;
 }
+
+body div.supply a.sidebar-button {
+	background-color:#f4715b;
+}
+
+body div.demand a.sidebar-button {
+	background-color:#17c1c7 !important;
+}
+
 
 .page-content-wrapper.inner-page .page-sidebar {
 	background: #fff;
