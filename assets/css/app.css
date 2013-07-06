@@ -266,6 +266,8 @@ button {
     margin-top: 20px;
 }
 
+.nav-user-not-logged a:link,
+.nav-user-not-logged a:visited, 
 .nav-user-settings a:link,
 .nav-user-settings a:visited {
     display: block;
@@ -295,6 +297,30 @@ button {
 	-o-transition: color .1s linear;  
 	transition:  color .1s linear;
 }
+.nav-user-not-logged > a:after {
+    font-family: "Flaticons Stroke";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    content: "\e5a7";
+    color: #ccc;
+    display: block;
+    float: right;
+    font-size: 24px;
+    margin-left: 2px;
+    margin-top: 29px;
+    -webkit-transition: color .1s linear;  
+    -moz-transition: color .1s linear;  
+    -o-transition: color .1s linear;  
+    transition:  color .1s linear;
+}
+.nav-user-not-logged a:hover,
+.nav-user-not-logged a:active,
+.nav-user-not-logged a:focus,
+.nav-user-not-logged:hover > a:link,
+.nav-user-not-logged:hover > a:visited,
+.nav-user-not-logged:hover > a:after,
 .nav-user-settings a:hover,
 .nav-user-settings a:active,
 .nav-user-settings a:focus,
@@ -303,6 +329,7 @@ button {
 .nav-user-settings:hover > a:after {
     color: #f4715b;
 }
+.nav-user-not-logged > a,
 .nav-user-settings > a {
     height: 80px;
     line-height: 80px;
