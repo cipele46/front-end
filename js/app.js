@@ -63,7 +63,29 @@ var app = (function($, window, document, undefined) {
             }
         });
 	};
+    var dropDown = function(el) {
+        var obj = this;
+        this.dd = el;
+        this.input = this.dd.children('input');
+        this.placeholder = this.dd.children('span');
+        this.opts = this.dd.find('ul.dropdown > li');
+        this.val = '';
+        this.index = -1;
+        obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+        });
+        obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text(obj.val);
+            obj.input.val(obj.val);
+
+        });
+    };
 	return {
-		init: _pageInit
+		init: _pageInit,
+        dropDown: dropDown
 	};
 })(jQuery, this, this.document);

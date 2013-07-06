@@ -14,7 +14,7 @@
  <link rel="stylesheet" href="assets/css/app-ie.css" />
  <![endif]-->
 </head>
-<body id="page">
+<body id="addPage">
 
 <header class="page-header">
     <div class="page-header-inner-wrapper clearfix">
@@ -32,7 +32,6 @@
 			</form>
         </div>
         <ul class="nav-user">
-			<li class="nav-user-new-add"><a href="add.html">objavi oglas</a></li>
 			<li class="nav-user-settings">
     			<a href="#home">Ivan Cipelić</a>
 				<div>
@@ -48,18 +47,34 @@
 </header>
 <div class="page-content-wrapper inner-page clearfix">
     <aside class="page-sidebar">
-        sidebar
+        <div class="logo" title="Cipele46">Cipele46</div>
+        <p>Oglas će biti aktivan 30 dana od datuma objave. Prije objave administrator mora odobriti oglas. Hvala na strpljenju!</p>
+        <a href="#" class="addButton">Objavi oglas</a>
+        <a href="#" class="cancle">Odustani</a>
     </aside>
     <div class="page-content">
         <header class="page-content-header clearfix">
-            <ul class="breadcrumbs clearfix">
-                <li><a href="#">Namještaj</a></li>
-                <li><span>Koprivničko-križevačka županija</span></li>
-            </ul>
         </header>
         
         <section class="page-content-container clearfix">
-            content
+            <input type="radio" name="rdb" id="rdb-1" value="Poklanjam" class="radio" checked="">
+            <label for="rdb-1" id="poklanjam">Poklanjam</label>
+            
+            <input type="radio" name="rdb" id="rdb-2" value="Trazim" class="radio">
+            <label id="trazim" for="rdb-2">Tražim</label>
+
+            <input type="textbox" id="naslov" placeholder="Upišite naslov oglasa...">
+            <textarea id="tekst">Upišite tekst oglasa</textarea>
+            <div class="inputArea">
+                <div id="zupanija" class="dropdownSelect" tabindex="1">
+                    <input type="textbox">
+                    <span>Županija</span>
+                    <ul class="dropdown" tabindex="1">
+                        <li><a href="#">Os</a></li>
+                        <li><a href="#">Si</a></li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </div>
 </div>
@@ -74,6 +89,15 @@
 <script>
     $(document).ready(function(){
         app.init();
+        $("input[type=radio]").checkBox();
+
+        //CUSTOM DROP DOWNS!
+        var dd = new app.dropDown( $('#zupanija') );
+
+        $(document).click(function() {
+            // all dropdowns
+            $('.dropdownSelect').removeClass('active');
+        });
     });
 </script>
 
