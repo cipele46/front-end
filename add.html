@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <link rel="apple-touch-icon-precomposed" media="screen and (resolution: 132dpi)" href="assets/images/shoes46_icon_72.png">
 <link rel="apple-touch-icon-precomposed" media="screen and (resolution: 326dpi)" href="assets/images/shoes46_icon_144.png">
 <link rel="Shortcut Icon" href="assets/images/favicon.ico" type="image/x-icon" />
@@ -66,13 +65,61 @@
             <input type="textbox" id="naslov" placeholder="Upišite naslov oglasa...">
             <textarea id="tekst">Upišite tekst oglasa</textarea>
             <div class="inputArea">
-                <div id="zupanija" class="dropdownSelect" tabindex="1">
-                    <input type="textbox">
-                    <span>Županija</span>
-                    <ul class="dropdown" tabindex="1">
-                        <li><a href="#">Os</a></li>
-                        <li><a href="#">Si</a></li>
-                    </ul>
+                <div class="left">
+                    <label class="title">Županija</label>
+                    <div id="zupanija" class="dropdownSelect">
+                        <input type="textbox" value="">
+                        <span>Županija</span>
+                        <ul class="dropdown" tabindex="1">
+                            <li><a href="#">Os</a></li>
+                            <li><a href="#">Si</a></li>
+                            <li><a href="#">Os</a></li>
+                            <li><a href="#">Si</a></li>
+                            <li><a href="#">Os</a></li>
+                            <li><a href="#">Si</a></li>
+                            <li><a href="#">Os</a></li>
+                            <li><a href="#">Si</a></li>
+                            <li><a href="#">Os</a></li>
+                            <li><a href="#">Si</a></li>
+                        </ul>
+                    </div>
+                    <label class="title">Kategorija</label>
+                    <div id="kategorija" class="dropdownSelect">
+                        <input type="textbox">
+                        <span>Kategorija</span>
+                        <ul class="dropdown" tabindex="1">
+                            <li><a href="#">Os</a></li>
+                            <li><a href="#">Si</a></li>
+                        </ul>
+                    </div>
+                    <label class="title">Grad</label>
+                    <div id="grad" class="dropdownSelect">
+                        <input type="textbox">
+                        <span>Grad</span>
+                        <ul class="dropdown" tabindex="1">
+                            <li><a href="#">Os</a></li>
+                            <li><a href="#">Si</a></li>
+                        </ul>
+                    </div>
+                     <div class="input-container">
+                        <label class="title">Broj telefona/mobitela</label>
+                        <input id="telNum"/>
+                        <p>Neće biti direktno vidljivo drugim korisnicima</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <label class="title">Dodajte fotografiju</label>
+                    <input type="button" id="uploadPhotoBtn"/>
+                    <div class="uploadingImg">
+                        <img src="" id="uploadedImg" />
+                        <div class="bck"></div>
+                    </div>
+                     <div class="input-container">
+                        <label class="title">Email adresa</label>
+                        <input id="eMail"/>
+                        <p>Opcionalno, bit će javno prikazan uz oglas</p>
+                    </div>
+                    <input type="file" style="visibility:hidden;width:1px;height:1px" id="imageFile" />
                 </div>
             </div>
         </section>
@@ -93,11 +140,67 @@
 
         //CUSTOM DROP DOWNS!
         var dd = new app.dropDown( $('#zupanija') );
+        var dd = new app.dropDown( $('#kategorija') );
+        var dd = new app.dropDown( $('#grad') );
 
-        $(document).click(function() {
+        $(document).click(function(event) {
             // all dropdowns
+            var id = event.target.id;
             $('.dropdownSelect').removeClass('active');
+            if( id != "tekst" && $("#tekst").val() === ""){
+                 $("#tekst").val("Upišite tekst oglasa");
+                 $("#tekst").css("color","#999")
+            }
         });
+
+        //CHOSE PHOTO BUTTON
+        $('.uploadingImg').click(function(){
+            console.log("clicked");
+            $('#imageFile').click();
+        });
+        $("#tekst").click(function(){
+            var $this = $(this);
+            if( $this.val() === "Upišite tekst oglasa"){
+                $this.css("color","black");
+                $this.val("")
+            }
+        });
+        //SHOW PHOTO WIDGET
+        $('#imageFile').change(function () {
+            handleFiles( this );
+        });
+        function handleFiles( input ) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#uploadedImg').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+                $(".uploadingImg").addClass("haveImg");
+                resizeImg();
+            }
+        }
+        //RESIZE IMG TO FIT THE CONTAINER  
+        function resizeImg() {
+            var $img = $('#uploadedImg');
+            $img
+            .load(function(){
+                var aspectRatio = $img.width() / $img.height(),
+                    $container = $(".uploadingImg"),
+                    contAspect = $container.width() / $container.height();
+                console.log( aspectRatio );
+                console.log(contAspect );
+                if ( contAspect < aspectRatio ) {
+                    $img
+                        .removeClass()
+                        .addClass('bgheight');
+                } else {
+                    $img
+                        .removeClass()
+                        .addClass('bgwidth');
+                }  
+            });           
+        }
     });
 </script>
 
