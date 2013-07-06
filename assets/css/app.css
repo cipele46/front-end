@@ -1,4 +1,4 @@
-/*  
+/*
     Color definitions
     page background:    #fff1d8
     element border:     #ccc
@@ -88,7 +88,7 @@ button {
     font-style: normal;
     font-weight: normal;
     line-height: 1;
-    -webkit-font-smoothing: antialiased; 
+    -webkit-font-smoothing: antialiased;
 }
 .icon.solid:before {
     font-family: "Flaticons Solid";
@@ -97,7 +97,7 @@ button {
     font-family: "Flaticons Stroke";
 }
 
-/* Icons 
+/* Icons
 ***************************************************************/
 .icon.stroke.down:before { content: "\e5a5"; }
 
@@ -110,8 +110,8 @@ button {
 /* Layout
 ***************************************************************/
 .page-header {
-    background: rgba(256, 256, 256, .9);
-    height: 80px; 
+    background: rgba(255, 255, 255, .9);
+    height: 80px;
     border-bottom: solid 2px rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
@@ -120,12 +120,12 @@ button {
 
 /* Home page */
 .page-content-wrapper,
-.page-header-inner-wrapper {  
+.page-header-inner-wrapper {
    width: 960px;
    margin: 0 auto;
-   position: relative; 
+   position: relative;
 }
-.page-content-wrapper {  
+.page-content-wrapper {
     padding-top: 90px;
 }
 .page-sidebar {
@@ -184,9 +184,9 @@ button {
     font-weight: bold;
     font-size: 1.8em;
     padding-top: 3px;
-    -webkit-transition: color .1s linear;  
-	-moz-transition: color .1s linear;  
-	-o-transition: color .1s linear;  
+    -webkit-transition: color .1s linear;
+	-moz-transition: color .1s linear;
+	-o-transition: color .1s linear;
 	transition:  color .1s linear;
 }
 .page-header nav li a:hover,
@@ -227,7 +227,7 @@ button {
 	background: transparent;
 	margin-top: 2px;
 }
-#search button:after { 
+#search button:after {
     display: block;
     font-family: "Flaticons Stroke";
     speak: none;
@@ -237,7 +237,7 @@ button {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     content: "\e45a";
-    color: #f4715b; 
+    color: #f4715b;
     position: absolute;
     left: 5px;
     top: 8px;
@@ -267,16 +267,16 @@ button {
 }
 
 .nav-user-not-logged a:link,
-.nav-user-not-logged a:visited, 
+.nav-user-not-logged a:visited,
 .nav-user-settings a:link,
 .nav-user-settings a:visited {
     display: block;
     color: #777;
     font-weight: bold;
     font-size: 1.8em;
-    -webkit-transition: color .1s linear;  
-	-moz-transition: color .1s linear;  
-	-o-transition: color .1s linear;  
+    -webkit-transition: color .1s linear;
+	-moz-transition: color .1s linear;
+	-o-transition: color .1s linear;
 	transition:  color .1s linear;
 }
 .nav-user-settings > a:after {
@@ -292,9 +292,9 @@ button {
     font-size: 24px;
     margin-left: 2px;
     margin-top: 29px;
-    -webkit-transition: color .1s linear;  
-	-moz-transition: color .1s linear;  
-	-o-transition: color .1s linear;  
+    -webkit-transition: color .1s linear;
+	-moz-transition: color .1s linear;
+	-o-transition: color .1s linear;
 	transition:  color .1s linear;
 }
 .nav-user-not-logged > a:after {
@@ -310,9 +310,9 @@ button {
     font-size: 24px;
     margin-left: 2px;
     margin-top: 29px;
-    -webkit-transition: color .1s linear;  
-    -moz-transition: color .1s linear;  
-    -o-transition: color .1s linear;  
+    -webkit-transition: color .1s linear;
+    -moz-transition: color .1s linear;
+    -o-transition: color .1s linear;
     transition:  color .1s linear;
 }
 .nav-user-not-logged a:hover,
@@ -389,7 +389,7 @@ button {
 	margin-top:26px;
 }
 
-.page-sidebar .sidebar-number:before { 
+.page-sidebar .sidebar-number:before {
     display: inline-block;
     font-family: "Flaticons Solid";
     speak: none;
@@ -399,7 +399,7 @@ button {
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     content: "\e118";
-    color: #f4715b; 
+    color: #f4715b;
     left: 5px;
     top: 8px;
 	margin-right:20px;
@@ -460,11 +460,11 @@ button {
 
 
 
-/* Board 
+/* Board
 ***************************************************************/
 /* Board navigation */
 .cards-board-filter {
-    
+
 }
 .cards-board-filter li {
     margin-bottom: 10px;
@@ -490,9 +490,9 @@ button {
     font-size: 1.6em;
     color: #444;
     position: relative;
-    -webkit-transition: color .1s linear;  
-	-moz-transition: color .1s linear;  
-	-o-transition: color .1s linear;  
+    -webkit-transition: color .1s linear;
+	-moz-transition: color .1s linear;
+	-o-transition: color .1s linear;
 	transition:  color .1s linear;
 }
 .cards-board-filter a:hover,
@@ -524,9 +524,9 @@ button {
     color: #ccc;
     font-size: 20px;
     margin-left: 2px;
-    -webkit-transition: color .1s linear;  
-	-moz-transition: color .1s linear;  
-	-o-transition: color .1s linear;  
+    -webkit-transition: color .1s linear;
+	-moz-transition: color .1s linear;
+	-o-transition: color .1s linear;
 	transition:  color .1s linear;
 }
 .cards-board-filter > ul > li.expanded > a:after {
@@ -550,7 +550,7 @@ button {
   	border-radius: 50%;
 }
 .cards-board-filter li.giving a:after {
-    background: #f4715b;         
+    background: #f4715b;
 }
 .cards-board-filter li.receiving a:after {
     background: #17c1c7;
@@ -566,7 +566,7 @@ button {
 }
 .breadcrumbs,
 .breadcrumbs li {
-    float: left; 
+    float: left;
 }
 .breadcrumbs li > a:after,
 .breadcrumbs li > span:after {
@@ -584,11 +584,11 @@ button {
 }
 
 .cards-counter {
-    float: right; 
+    float: right;
 }
 .cards-counter strong {
     font-weight: bold;
-    color: #f4715b; 
+    color: #f4715b;
 }
 
 /* Board footer */
@@ -615,9 +615,9 @@ button {
     border: solid 1px #f4715b;
     padding: 10px;
     color: #f4715b;
-    -webkit-transition: all .1s linear;  
-	-moz-transition: all .1s linear;  
-	-o-transition: all .1s linear;  
+    -webkit-transition: all .1s linear;
+	-moz-transition: all .1s linear;
+	-o-transition: all .1s linear;
 	transition:  all .1s linear;
 }
 .cards-pager li span {
@@ -665,11 +665,11 @@ button {
     transition: all .2s linear;
 }
 .card:hover figure img {
-    -webkit-transform: scale(1.05); 
-    -moz-transform: scale(1.05); 
-    -ms-transform: scale(1.05); 
-    -o-transform: scale(1.05); 
-    transform: scale(1.05); 
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
 }
 .card h2 {
     font-weight: bold;
@@ -679,9 +679,9 @@ button {
 .card h2 a:link,
 .card h2 a:visited {
     color: #212121;
-    -webkit-transition: all .1s linear;  
-    -moz-transition: all .1s linear;  
-	-o-transition: all .1s linear;  
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+	-o-transition: all .1s linear;
 	transition:  all .1s linear;
 }
 .card p {
@@ -691,9 +691,9 @@ button {
 }
 .card footer {
     border-top: solid 1px #ccc;
-    -webkit-transition: all .1s linear;  
-	-moz-transition: all .1s linear;  
-	-o-transition: all .1s linear;  
+    -webkit-transition: all .1s linear;
+	-moz-transition: all .1s linear;
+	-o-transition: all .1s linear;
 	transition:  all .1s linear;
 	margin-top: 10px;
 	padding-top: 10px;
@@ -734,7 +734,7 @@ button {
 }
 .card.receiving:hover footer {
     border-color: #f4715b
-} 
+}
 
 .card-place,
 .card-category,
@@ -772,7 +772,7 @@ a.card-favorite:visited:before {
     content: "\e49d";
     font-size: 20px;
     color: #ccc;
-} 
+}
 a.card-favorite:hover:before,
 a.card-favorite:active:before,
 a.card-favorite:focus:before {
@@ -789,8 +789,8 @@ a.card-favorite.selected:visited:before {
     content: "\e0b5";
     font-size: 20px;
     color: #ffd33d;
-} 
-  
+}
+
 /* Isotope */
 .isotope-item {
   z-index: 2;
@@ -860,7 +860,7 @@ a.card-favorite.selected:visited:before {
     font-size: 1.6em;
     color: #444;
     margin-top: 10px;
-} 
+}
 .card-details header {
     padding-bottom: 10px;
     border-bottom: solid 1px #ccc;
@@ -873,13 +873,13 @@ a.card-favorite.selected:visited:before {
 /**************************************************************/
 .page-content-wrapper.inner-page .page-content-container,
 .page-content-wrapper.inner-page .page-sidebar {
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background: #fff;
     border-bottom: solid 2px rgba(0, 0, 0, 0.2);
     border-top: solid 6px #f4715b;
-   
+
 }
 
 .page-content-wrapper.inner-page .page-content-container {
@@ -1008,8 +1008,8 @@ a.card-favorite.selected:visited:before {
 /* CUSTOM DROP DOWNS! */
 /***************************************************************/
 .dropdownSelect {
-    -moz-box-sizing: border-box; 
-    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     position: relative;
     width: 100%;
@@ -1090,11 +1090,11 @@ a.card-favorite.selected:visited:before {
 /* Homepage */
 /* Layout */
 .page-content-wrapper,
-.page-header-inner-wrapper {  
+.page-header-inner-wrapper {
    width: 1280px;
 }
 
-/* Header */    
+/* Header */
 .page-header nav {
     margin-left: 50px;
 }
