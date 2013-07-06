@@ -1293,19 +1293,36 @@ a.card-favorite.selected:visited {
 .dropdownSelect.active {
 
 }
-
+.single-col-container{
+    width: 240px;
+    margin: 0 auto;
+}
+.single-col-container input{
+    margin-bottom: 30px;
+}
+.red{
+    background-color: #f4715b !important;
+}
 /* Login
 ***************************************************************/
 .login-form-container input,
 .button{
-    width: 80%;
+    width: 180px;
     height: 44px;
     border: none;
     font-size: 1.8em;
     line-height: 44px;
     position: relative;
     background-color: #eee;
-    padding: 0 10%;
+    padding: 0 30px;
+    color: #fff;
+}
+input[type=submit].button{
+    width: 240px;
+}
+input[type=email],
+input[type=password],
+input[type=text]{
     color: #333;
 }
 .login-form-container input:focus{
@@ -1359,7 +1376,7 @@ a.card-favorite.selected:visited {
     height: 100%;
     margin: 0 auto;
 }
-.login-col-content span{
+span.form-label{
     width: 100%;
     display: inline-block;
     color: #777;
