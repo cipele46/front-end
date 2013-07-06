@@ -365,6 +365,10 @@ button {
     margin-left: 10px;
     display: none;
 }
+#cards-board-filter-nav > li { /* padding needs to be used instead of margin or slide animations are jumpy */
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
 .cards-board-filter > ul > li.expanded ul {
     display: block;
 }

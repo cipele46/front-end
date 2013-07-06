@@ -25,8 +25,14 @@ var app = (function($, window, document, undefined) {
             event.preventDefault();
 
             var $li = $(this).parent();
+            var $ul = $li.children("ul");
 
-            $li.toggleClass("expanded");
+            $ul.slideToggle(400, function() {
+                if ($ul.is(":visible"))
+                    $li.addClass("expanded");
+                else
+                    $li.removeClass("expanded");
+            });
         });
 
         $(".cards-board").isotope({
