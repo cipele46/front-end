@@ -4,6 +4,7 @@ var app = (function($, window, document, undefined) {
 
 	var _pageInit = function() {
          _cardBoardInit();
+         _validationInit();
 	};
 
 	var _cardBoardInit = function() {
@@ -54,7 +55,7 @@ var app = (function($, window, document, undefined) {
             var anim_down = function(elem) {
                 return elem.animate({ scale: 0.6 },{
                         duration: 250,
-                        done: function() { 
+                        done: function() {
                             if (elem.data().busy)  anim_up(elem);
                             else anim_end(elem);
 
@@ -64,7 +65,7 @@ var app = (function($, window, document, undefined) {
             var anim_up = function(elem) {
                 return elem.animate({ scale: 0.8 },{
                         duration: 250,
-                        done: function() { anim_down(elem); 
+                        done: function() { anim_down(elem);
                 }});
             }
 
@@ -85,7 +86,7 @@ var app = (function($, window, document, undefined) {
             $.ajax({
                 url: 'http://127.0.0.1:8080/set_fav.js',
                 data: {
-                        selected: $favIcon.is(".selected"), 
+                        selected: $favIcon.is(".selected"),
                         card: $favIcon.data().card
                 },
                 dataType: 'json',
@@ -102,12 +103,12 @@ var app = (function($, window, document, undefined) {
         }
 	};
 
-	var _formInit = function() {
-        jQuery.extend(jQuery.validator.messages, {
-            required: "Obavezno polje",
-            email: "Molimo unesite ispravnu e-mail adresu"
-        });
+    jQuery.extend(jQuery.validator.messages, {
+        required: "Obavezno polje",
+        email: "Molimo unesite ispravnu e-mail adresu"
+    });
 
+	var _formInit = function() {
         var v = $("form").validate({
             showErrors: function(errorMap, errorList) {
                 this.defaultShowErrors();
@@ -115,6 +116,10 @@ var app = (function($, window, document, undefined) {
             }
         });
 	};
+    var _validationInit = function() {
+        //_formInit();
+        $("#login-form").validate();
+    };
     var dropDown = function(el) {
         var obj = this;
         this.dd = el;

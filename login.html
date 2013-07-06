@@ -15,6 +15,7 @@
  <![endif]-->
 </head>
 <body id="page">
+    <div id="fb-root"></div>
 
 <header class="page-header">
     <div class="page-header-inner-wrapper clearfix">
@@ -52,11 +53,11 @@
         <h2 class="form-heading">Da bi ostavio oglas, moraš se prijaviti!</h2>
         <div class="login-col-container">
             <div class="login-col-content">
-                <form action="">
+                <form action="" id="login-form">
                     <span>E-mail</span>
-                    <input type="email" id="login-email">
+                    <input type="email" id="login-email" required>
                     <span>Lozinka</span>
-                    <input type="password" id="login-password">
+                    <input type="password" id="login-password" required>
                     <span class="forgot-password"><a href="#TODO">Zaboravili ste lozinku?</a></span>
                     <input type="submit" value="Prijavi se" class="button">
                 </form>
