@@ -3,3 +3,13 @@
 .page-header {
     background: #fff;
 }
+
+/* Forms */
+/**************************************************************/
+.input-container input ~ .note {
+	visibility: hidden;
+}
+
+.input-container input:focus ~ .note {
+    visibility: visible;
+}

@@ -105,21 +105,27 @@ var app = (function($, window, document, undefined) {
 
     jQuery.extend(jQuery.validator.messages, {
         required: "Obavezno polje",
-        email: "Molimo unesite ispravnu e-mail adresu"
+        email: "Molimo unesite ispravnu e-mail adresu",
+        minlength: "Molimo unesite barem {0} znakova",
+        maxlength: "Molimo unesite najviše {0} znakova"
     });
 
-	var _formInit = function() {
-        var v = $("form").validate({
+	var _formInit = function(sel) {
+        var v = $(sel).validate({
             showErrors: function(errorMap, errorList) {
                 this.defaultShowErrors();
                 $("label.error").attr("title", function() {return $(this).text();});
             }
         });
+
+        return v;
 	};
+
     var _validationInit = function() {
         //_formInit();
         $("#login-form").validate();
     };
+
     var dropDown = function(el) {
         var obj = this;
         this.dd = el;
@@ -141,8 +147,10 @@ var app = (function($, window, document, undefined) {
 
         });
     };
+    
 	return {
 		init: _pageInit,
+        formInit: _formInit,
         dropDown: dropDown
 	};
 })(jQuery, this, this.document);

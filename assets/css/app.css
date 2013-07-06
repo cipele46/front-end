@@ -79,6 +79,10 @@ button {
     display: none;
 }
 
+.visibility-hidden {
+    visibility: hidden;
+}
+
 .line-through {
     text-decoration: line-through;
 }
@@ -161,6 +165,17 @@ button {
    width: 270px;
    margin: 50px 10px 10px;
 }
+
+/* Inner page without aside */
+.page-content-wrapper.inner-page-single {
+    width: 940px;
+}
+
+.page-content-wrapper.inner-page-single .page-content {
+    float: none;
+    margin: 0 auto;
+}
+
 
 /* Page Header
 ***************************************************************/
@@ -932,9 +947,33 @@ a.card-favorite.selected:visited {
 	color: #777;
 }
 
+
+/* User settings 
+***************************************************************/
+.settings .form-section-container {
+    width: 100%;
+}
+
+.settings .form-section-container .fieldset {
+    margin: 20px auto 50px;
+    padding: 0 100px;
+    width: 250px;
+}
+
+.settings input[type=submit] {
+    background-color: #f4715b;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    margin: 30px auto 0;
+    width: 250px;
+}
+
 /* Inner pages */
 /**************************************************************/
-.page-content-wrapper.inner-page .page-content-container {
+.page-content-wrapper.inner-page .page-content-container,
+.page-content-wrapper.inner-page-single .page-content-container {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -965,7 +1004,70 @@ a.card-favorite.selected:visited {
 
 /* Forms */
 /**************************************************************/
-/* TODO */
+.form-heading {
+    color: #f4715b;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.input-container {
+    color: #999;
+    font-size: 12px;
+    margin: 20px 0 25px;
+}
+
+.input-container > * {
+    display: block;
+    width: 250px;
+}
+
+.input-container .title {
+    font-size: 14px;
+}
+
+.input-container input[type="text"],
+.input-container input[type="email"],
+.input-container input[type="number"],
+.input-container input[type="tel"],
+.input-container input[type="date"],
+.input-container input[type="password"] {
+    background: #eee;
+    border: 0;
+    color: #333;
+    font-size: 16px;
+    height: 44px;
+    margin: 5px 0 0;
+    padding: 0 20px;
+    width: 210px;
+}
+
+.input-container input ~ .note {
+    opacity: 0;
+    position: absolute;
+    color: #3FA83F;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-transition: opacity 0.1s ease-in-out;
+       -moz-transition: opacity 0.1s ease-in-out;
+        -ms-transition: opacity 0.1s ease-in-out;
+         -o-transition: opacity 0.1s ease-in-out;
+            transition: opacity 0.1s ease-in-out;
+}
+
+.input-container input:focus ~ .note {
+    opacity: 1;
+}
+
+.input-container label.error {
+    color: #ff2929;
+    position: absolute;
+}
+
+.input-container input.error ~ label.error ~ .note {
+    margin-top: 12px;
+}
+
 
 /* Content */
 /***************************************************************/
@@ -1376,5 +1478,19 @@ a.card-favorite.selected:visited {
    width: 240px;
 }
 
+/* User settings 
+***************************************************************/
+.settings form {
+    margin: 20px 0;
+}
+
+.settings .form-section-container {
+    display: table;
+}
+
+.settings .form-section-container .fieldset {
+    display: table-cell;
+    width: 50%;
+}
 
 }
