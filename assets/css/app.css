@@ -1707,6 +1707,7 @@ span.form-label{
     float:left;
     background:white;
     padding:80px;
+    margin-bottom: 220px;
 }
 #nasaPrica .page-contant .box h3{
     font-size:34px;
@@ -1725,6 +1726,9 @@ span.form-label{
 }
 #nasaPrica .page-contant .poklanjam h3{
     color:#10c1c7;
+}
+#nasaPrica h2.u-izradi {
+    margin-bottom: 2em;
 }
 
 /* RWD Part */
