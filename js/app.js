@@ -84,14 +84,8 @@ var app = (function($, window, document, undefined) {
 
             $favIcon.prop("title", selected ? $favIcon.data().remove : $favIcon.data().add);
             $.ajax({
-                url: 'http://127.0.0.1:8080/set_fav.js',
-                data: {
-                        selected: $favIcon.is(".selected"),
-                        card: $favIcon.data().card
-                },
+                url: $favIcon.attr("href"),
                 dataType: 'json',
-                jsonp: 'callback',
-                jsonpCallback: 'jsonpCallback',
                 success: function(){
                     $favIcon.data().busy = false;
                 },
