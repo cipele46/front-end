@@ -420,6 +420,12 @@ button {
     top: 8px;
 	margin-right:20px;
 }
+
+.page-sidebar .sidebar-number-color-blue:before {
+    color: #17c1c7 !important;
+}
+
+
 .page-sidebar .sidebar-email {
 	color:#777777;
 	font-size: 18px;
@@ -502,6 +508,10 @@ button {
 	border: 0px;
 	text-align: center;
 }
+.page-sidebar a.sidebar-button-color-blue:link{
+	background: #17c1c7 !important;
+}
+
 .page-sidebar a.sidebar-button-gray:link{
 	display: block;
 	color: #fff;
@@ -934,6 +944,13 @@ a.card-favorite.selected:visited {
 
     margin: 10px;
     padding: 20px;
+}
+
+.top-border-color-blue {
+	border-top-color: #17c1c7 !important;
+}
+.color-blue {
+	color: #17c1c7 !important;
 }
 
 .page-content-wrapper.inner-page .page-sidebar {
