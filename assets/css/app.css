@@ -960,7 +960,7 @@ a.card-favorite.selected:visited {
 	color: #777;
 }
 
-/* User settings 
+/* User settings
 ***************************************************************/
 .settings .form-section-container {
     width: 100%;
@@ -1172,7 +1172,7 @@ body div.demand button.sidebar-button {
     background: #fff;
     border-bottom: solid 2px rgba(0, 0, 0, 0.2);
     border-top: solid 6px #f4715b;
-   
+
 }
 #addPage .page-sidebar{
     padding:20px;
@@ -1655,9 +1655,6 @@ span.form-label{
 
 /*NASA PRICA */
 /***************************************************************/
-#nasaPrica{
-    height:1650px;
-}
 #nasaPrica .page-container{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1774,7 +1771,7 @@ span.form-label{
    width: 240px;
 }
 
-/* User settings 
+/* User settings
 ***************************************************************/
 .settings form {
     margin: 20px 0;
