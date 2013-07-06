@@ -375,6 +375,91 @@ button {
     border-bottom: 10px solid #ccc;
 }
 
+/* Sidebar */
+.page-sidebar h3 {
+	font-size:24px;
+	font-weight: bold;
+	color: #f4715b;
+	margin-top:8px;
+}
+.page-sidebar .sidebar-number {
+	color:#777777;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top:26px;
+}
+
+.page-sidebar .sidebar-number:before { 
+    display: inline-block;
+    font-family: "Flaticons Solid";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: "\e118";
+    color: #f4715b; 
+    left: 5px;
+    top: 8px;
+	margin-right:20px;
+}
+
+
+.page-sidebar .sidebar-input-description {
+	font-size:12px;
+	color:#777777;
+	font-weight: normal;
+	margin-top: 36px;
+	margin-bottom: 2px;
+}
+.page-sidebar .sidebar-input-description-email {
+	font-size:12px;
+	color:#777777;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 4px;
+}
+.page-sidebar textarea {
+	background: #fff;
+	line-height: 24px;
+	color: #777;
+	border: 1px solid #cccccc;
+	outline: none;
+	font-size: 1.7em;
+	padding:10px;
+	width: 220px;
+}
+
+.page-sidebar input {
+	background: #fff;
+	height: 36px;
+	line-height: 36px;
+	color: #777;
+	border: 1px solid #cccccc;
+	outline: none;
+	font-size: 1.7em;
+	padding-left:10px;
+	width: 230px;
+	margin-top:0px;
+}
+
+.page-sidebar a.sidebar-button:link{
+	display: block;
+	color: #fff;
+	font-weight: bold;
+	font-size: 2em;
+	background: #f4715b;
+	height: 48px;
+	line-height: 48px;
+	padding: 0 30px;
+	margin-top: 20px;
+	border: 0px;
+	text-align: center;
+}
+
+
+
 /* Board 
 ***************************************************************/
 /* Board navigation */
