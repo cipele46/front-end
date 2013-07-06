@@ -403,10 +403,6 @@ button {
 
 /* Sidebar */
 
-.sidebar-wrapper{
-
-}
-
 .page-sidebar h3 {
 	font-size:24px;
 	font-weight: bold;
@@ -469,6 +465,7 @@ button {
 	font-weight: normal;
 	margin-top: 36px;
 	margin-bottom: 2px;
+	display: block;
 }
 .page-sidebar .sidebar-button-description {
 	font-size:12px;
@@ -478,6 +475,7 @@ button {
 	margin-bottom: 2px;
 	text-align: center;
 	line-height: 16px;
+	display: block;
 }
 .page-sidebar .sidebar-input-description-email {
 	font-size:12px;
@@ -485,6 +483,7 @@ button {
 	font-weight: normal;
 	margin-top: 10px;
 	margin-bottom: 4px;
+	display: block;
 }
 .page-sidebar textarea {
 	background: #fff;
@@ -539,6 +538,18 @@ button {
 	margin-top: 20px;
 	border: 0px;
 	text-align: center;
+}
+
+.page-sidebar ul.sidebar-blog-arhiva li a:link {
+	color:#777777;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top:18px;
+	display: block;
+}
+
+.page-sidebar ul.sidebar-blog-arhiva {
+	margin-bottom:34px;
 }
 
 
@@ -933,6 +944,7 @@ a.card-favorite.selected:visited {
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: solid 1px #ccc;
+	padding-top: 4px;
 }
 .card-details p {
     font-size: 1.6em;
@@ -946,7 +958,6 @@ a.card-favorite.selected:visited {
     font-size: 1.4em;
 	color: #777;
 }
-
 
 /* User settings 
 ***************************************************************/
@@ -970,6 +981,29 @@ a.card-favorite.selected:visited {
     width: 250px;
 }
 
+.card-details .pull-right {
+	float:right;
+}
+
+.card-details .link-vise {
+	font-size:22px;
+	font-weight: bold;
+	color: #f4715b;
+	margin-top:12px;
+	display: block;
+}
+
+.card-details .page-blog-h2 {
+	padding-bottom:20px;
+	padding-top:4px;
+}
+
+.card-details .card-text {
+	line-height: 24px;
+	color: #777;
+	font-size: 1.7em;
+}
+
 /* Inner pages */
 /**************************************************************/
 .page-content-wrapper.inner-page .page-content-container,
@@ -981,7 +1015,7 @@ a.card-favorite.selected:visited {
     border-bottom: solid 2px rgba(0, 0, 0, 0.2);
     border-top: solid 6px #f4715b;
 
-    margin: 10px;
+    margin: 10px 10px 24px 10px;
     padding: 20px;
 }
 

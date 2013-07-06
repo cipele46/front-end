@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <link rel="apple-touch-icon-precomposed" media="screen and (resolution: 132dpi)" href="assets/images/shoes46_icon_72.png">
 <link rel="apple-touch-icon-precomposed" media="screen and (resolution: 326dpi)" href="assets/images/shoes46_icon_144.png">
 <link rel="Shortcut Icon" href="assets/images/favicon.ico" type="image/x-icon" />
@@ -56,13 +55,14 @@
 			<!-- Mario S napomena: za crvenu ili plavu boju napravi toggle (uključi-isključi) sidebar-number-color-blue klase -->
 			<p class="sidebar-number sidebar-number-color-blue">099 232 456</p>
 		 	<form>
-				<p class="sidebar-input-description">Poruka</p>
-				<textarea rows="8" name="sidebar-texarea" placeholder="Upiši poruku"></textarea>
-				<p class="sidebar-input-description-email">Email adresa na koju želite dobiti odgovor</p>
-				<input id="q" name="q" type="email" title="email" placeholder="Upiši email"/>
+				<label for="upisi" class="sidebar-input-description">Poruka</label>
+				<textarea id="upisi" rows="8" name="sidebar-texarea" placeholder="Upiši poruku"></textarea>
+				<label for="email" class="sidebar-input-description-email">Email adresa na koju želite dobiti odgovor</label>
+				<input id="email" name="q" type="email" title="email" placeholder="Upiši email"/>
 				<!-- Mario S napomena: za crvenu ili plavu boju napravi toggle (uključi-isključi) sidebar-button-color-blue klase 
-				-->
 				<a href="#" class="sidebar-button sidebar-button-color-blue" type="submit" title="Pošalji">Pošalji upit</a>
+				-->
+				<a href="#" class="sidebar-button" type="submit" title="Pošalji">Pošalji upit</a>
 			</form>
 		</div>
 		<!-- Mario S napomena: za crvenu ili plavu boju napravi toggle (uključi-isključi) top-border-color-blue klase -->
@@ -97,7 +97,7 @@
                     <a href="#" class="card-favorite selected" title="Makni iz favorita" data-add="Dodaj u favorite" data-remove="Makni iz favorita"></a>
                 </header>
                 <figure class="icon window-2"><img src="assets/data/images/card_image_2.jpg" alt="card_image_2" width="260"></figure>
-                <p>Poklanjam očuvani starinski namještaj radi preseljenja. Mogućnost preuzimanja u komadu ili pojedinačno. Dostava nije ...</p>
+                <p class="card-text">Poklanjam očuvani starinski namještaj radi preseljenja. Mogućnost preuzimanja u komadu ili pojedinačno. Dostava nije ...</p>
             </article>
         </section>
     </div>
