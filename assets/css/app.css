@@ -1082,9 +1082,19 @@ body div.demand a.sidebar-button {
     color: #333;
     font-size: 16px;
     height: 44px;
+    line-height: normal;
     margin: 5px 0 0;
     padding: 0 20px;
     width: 210px;
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="email"]:focus,
+.input-container input[type="number"]:focus,
+.input-container input[type="tel"]:focus,
+.input-container input[type="date"]:focus,
+.input-container input[type="password"]:focus {
+    background-color: #ddd;
 }
 
 .input-container input ~ .note {
