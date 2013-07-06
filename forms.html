@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<link rel="apple-touch-icon-precomposed" media="screen and (resolution: 132dpi)" href="assets/images/shoes46_icon_72.png">
+<link rel="apple-touch-icon-precomposed" media="screen and (resolution: 326dpi)" href="assets/images/shoes46_icon_144.png">
+<link rel="Shortcut Icon" href="assets/images/favicon.ico" type="image/x-icon" />
+<title>Cipele46</title>
+<link rel="stylesheet" href="assets/css/resets.css" />
+<link rel="stylesheet" href="assets/css/app.css" />
+ <!--[if lt IE 9]>
+ <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+ <link rel="stylesheet" href="assets/css/app-ie.css" />
+ <![endif]-->
+</head>
+<body id="page">
+
+<header class="page-header">
+    <div class="page-header-inner-wrapper clearfix">
+        <a href="http://www.cipele46.org" class="logo" title="Cipele46">Cipele46</a>
+        <nav>
+            <ul>
+                <li class="current"><a href="#oglasi">oglasi</a></li>
+                <li><a href="#blog">blog</a></li>
+                <li><a href="#onama">o nama</a></li>
+            </ul>
+        </nav>
+        <div id="search">
+            <form>
+				<input id="q" name="q" type="text" title="search" placeholder="pretraži"/><button id="search-button" type="submit" title="Search"></button>
+			</form>
+        </div>
+        <ul class="nav-user">
+			<li class="nav-user-new-add"><a href="add.html">objavi oglas</a></li>
+			<li class="nav-user-settings">
+    			<a href="#home">Ivan Cipelić</a>
+				<div>
+    				<ul>
+    					<li><a href="#">Postavke</a></li>
+    					<li><a href="#">Moji oglasi</a></li>
+    					<li><a href="#">Odjavi se</a></li>
+    				</ul>
+				<div>
+			</li>
+		</ul>
+    </div>
+</header>
+<div class="page-content-wrapper inner-page clearfix">
+    <aside class="page-sidebar">
+        sidebar
+    </aside>
+    <div class="page-content">
+        <header class="page-content-header clearfix">
+            <ul class="breadcrumbs clearfix">
+                <li><a href="#">Namještaj</a></li>
+                <li><span>Koprivničko-križevačka županija</span></li>
+            </ul>
+        </header>
+        
+        <section class="page-content-container clearfix">
+            <input type="radio" checked="" name="rdb" id="rdb-1" value="nesto">
+            <label for="rdb-1">nesto</label>
+            
+            <input type="radio" name="rdb" id="rdb-2" value="nesto drugo">
+            <label for="rdb-2">nesto drugo</label>
+        </section>
+    </div>
+</div>
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/jquery.csssupport.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<script src="assets/js/jquery.isotope.min.js"></script>
+<script src="assets/js/jquery.forms.js"></script>
+<script src="assets/js/jquery.forms.validate.js"></script>
+<script src="js/app.js"></script>
+<script>
+    $(document).ready(function(){
+        app.init();
+        
+        $("input[type=radio]").checkBox();
+    });
+</script>
+
+</body>
+</html>
