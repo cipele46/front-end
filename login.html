@@ -53,11 +53,18 @@
         <h2 class="form-heading">Da bi ostavio oglas, moraš se prijaviti!</h2>
         <div class="login-col-container">
             <div class="login-col-content">
-                <form action="" id="login-form">
-                    <span class="form-label">E-mail</span>
-                    <input type="email" id="login-email" required>
-                    <span class="form-label">Lozinka</span>
-                    <input type="password" id="login-password" required>
+                <form action="" id="login-form" method="post">
+                    <div class="input-container">
+                        <label for="login-email" class="title">E-mail</label>
+                        <input id="login-email" name="email" type="email" required autofocus />
+                        <label for="login-email" class="error"></label>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="login-password" class="title">Lozinka</label>
+                        <input id="login-password" name="password" type="password" class="required" />
+                    </div>
+
                     <span class="forgot-password form-label"><a href="#TODO">Zaboravili ste lozinku?</a></span>
                     <input type="submit" value="Prijavi se" class="button">
                 </form>

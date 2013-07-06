@@ -1294,11 +1294,11 @@ a.card-favorite.selected:visited {
 
 }
 .single-col-container{
-    width: 240px;
+    width: 250px;
     margin: 0 auto;
 }
 .single-col-container input{
-    margin-bottom: 30px;
+    margin: 30px 0;
 }
 .red{
     background-color: #f4715b !important;
@@ -1318,7 +1318,7 @@ a.card-favorite.selected:visited {
     color: #fff;
 }
 input[type=submit].button{
-    width: 240px;
+    width: 250px;
 }
 input[type=email],
 input[type=password],
@@ -1372,7 +1372,7 @@ input[type=text]{
     left: 4px;
 }
 .login-col-content{
-    width: 240px;
+    width: 250px;
     height: 100%;
     margin: 0 auto;
 }

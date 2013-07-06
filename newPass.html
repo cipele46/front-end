@@ -51,10 +51,16 @@
     <div class="page-content-container">
         <div class="single-col-container">
         <form action="" id="renew-password-form">
-            <span class="form-label">Lozinka</span>
-            <input type="email" id="login-email" required class="button">
-            <span class="form-label">Ponovljena lozinka</span>
-            <input type="email" id="login-email" required class="button">
+            <div class="input-container">
+                <label for="new-password" class="title">Unesite novu lozinku</label>
+                <input id="new-password" name="new-password" type="password" />
+            </div>
+
+            <div class="input-container">
+                <label for="new-password-confirm" class="title">Ponovite novu lozinku</label>
+                <input id="new-password-confirm" name="new-password-confirm" type="password" />
+            </div>
+            
             <input type="submit" value="Promijeni" class="red button">
         </form>
         </div>

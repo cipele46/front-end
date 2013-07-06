@@ -50,9 +50,12 @@
 <div class="page-content-wrapper inner-page clearfix">
     <div class="page-content-container">
         <div class="single-col-container">
-        <form action="" id="renew-password-form">
-            <span class="form-label">E-mail</span>
-            <input type="email" id="login-email" required class="button">
+        <form action="" id="renew-password-form" method="post">
+            <div class="input-container">
+                <label for="email" class="title">E-mail</label>
+                <input id="login-email" name="email" type="email" required autofocus />
+            </div>
+            
             <input type="submit" value="Pošalji" class="red button">
         </form>
         </div>
