@@ -47,18 +47,18 @@
     </div>
 </header>
 <div class="page-content-wrapper inner-page clearfix">
-    <div class="page-content-container" style="height : 300px">
-        <div class="login-form-container">
+    <div class="page-content-container">
+        <div class="login-form-container clearfix">
         <h2 class="form-heading">Da bi ostavio oglas, moraš se prijaviti!</h2>
         <div class="login-col-container">
             <div class="login-col-content">
                 <form action="">
                     <span>E-mail</span>
-                    <input type="text" id="login-email">
+                    <input type="email" id="login-email">
                     <span>Lozinka</span>
                     <input type="password" id="login-password">
-                    <span><a href="#TODO">Zaboravili ste lozinku?</a></span>
-                    <input type="submit" value="Prijavi se">
+                    <span class="forgot-password"><a href="#TODO">Zaboravili ste lozinku?</a></span>
+                    <input type="submit" value="Prijavi se" class="button">
                 </form>
             </div>
             <div class="col-divider">ili</div>
@@ -66,13 +66,17 @@
         <div class="login-col-container">
             <div class="login-col-content">
                 <ul class="social-list clearfix">
-                    <li class="social-item facebook">Facebook</li>
-                    <li class="social-item google">Sign in</li>
-                    <li class="social-item twitter">Twitter</li>
+                    <li class="social-item button facebook">Facebook</li>
+                    <li class="social-item button google">Sign in</li>
+                    <li class="social-item button twitter">Twitter</li>
                 </ul>
             </div>
         </div>
-        <div class="login-footer"></div>
+    </div>
+    <div class="login-footer">
+        <span>
+            <a href="#TODO">Nemam račun, želim se registrirati</a>
+        </span>
     </div>
 </div>
 
