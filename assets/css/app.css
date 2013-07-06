@@ -1029,11 +1029,11 @@ body div.supply .page-sidebar h3, body div.supply .sidebar-number,body div.suppl
 	color: #17c1c7 !important;
 }
 
-body div.supply a.sidebar-button {
+body div.supply button.sidebar-button {
 	background-color:#f4715b;
 }
 
-body div.demand a.sidebar-button {
+body div.demand button.sidebar-button {
 	background-color:#17c1c7 !important;
 }
 
