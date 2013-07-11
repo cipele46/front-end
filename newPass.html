@@ -50,17 +50,17 @@
 <div class="page-content-wrapper inner-page clearfix">
     <div class="page-content-container">
         <div class="single-col-container">
-        <form action="" id="renew-password-form">
+        <form action="" id="renew-password-form" method="post">
             <div class="input-container">
                 <label for="new-password" class="title">Unesite novu lozinku</label>
-                <input id="new-password" name="new-password" type="password" />
+                <input id="new-password" name="new-password" type="password" required />
             </div>
 
             <div class="input-container">
                 <label for="new-password-confirm" class="title">Ponovite novu lozinku</label>
-                <input id="new-password-confirm" name="new-password-confirm" type="password" />
+                <input id="new-password-confirm" name="new-password-confirm" type="password" required />
             </div>
-            
+
             <input type="submit" value="Promijeni" class="red button">
         </form>
         </div>
@@ -73,15 +73,12 @@
 </div>
 
 <script src="assets/js/jquery.js"></script>
-<script src="assets/js/jquery.csssupport.js"></script>
-<script src="assets/js/jquery.cookie.js"></script>
-<script src="assets/js/jquery.isotope.min.js"></script>
 <script src="assets/js/jquery.forms.js"></script>
 <script src="assets/js/jquery.forms.validate.js"></script>
 <script src="js/app.js"></script>
 <script>
     $(document).ready(function(){
-        app.init();
+        app.formInit('#renew-password-form');
     });
 </script>
 

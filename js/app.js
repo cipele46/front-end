@@ -122,12 +122,11 @@ var app = (function($, window, document, undefined) {
 
     var dropDown = function(el) {
         var obj = this;
-        this.dd = el;
-        this.input = this.dd.children('input');
-        this.placeholder = this.dd.children('span');
-        this.opts = this.dd.find('ul.dropdown > li');
-        this.val = '';
-        this.index = -1;
+        obj.dd = el;
+        obj.inp = this.dd.children('input');
+        obj.placeholder = this.dd.children('span');
+        obj.opts = this.dd.find('ul.dropdown > li');
+        obj.val = '';
         obj.dd.on('click', function(event){
             $(this).toggleClass('active');
             return false;
@@ -135,10 +134,10 @@ var app = (function($, window, document, undefined) {
         obj.opts.on('click',function(){
             var opt = $(this);
             obj.val = opt.text();
-            obj.index = opt.index();
             obj.placeholder.text(obj.val);
-            obj.input.val(obj.val);
-
+            $(obj.inp).val(obj.val);
+            $(obj.inp).attr('value', obj.val);
+            console.log(obj.inp);
         });
     };
     

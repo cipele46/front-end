@@ -432,10 +432,6 @@ button {
 	margin-right:20px;
 }
 
-.page-sidebar .sidebar-number-color-blue:before {
-    color: #17c1c7 !important;
-}
-
 
 .page-sidebar .sidebar-email {
 	color:#777777;
@@ -509,7 +505,7 @@ button {
 	margin-top:0px;
 }
 
-.page-sidebar a.sidebar-button:link{
+.page-sidebar .sidebar-button{
 	display: block;
 	color: #fff;
 	font-weight: bold;
@@ -521,12 +517,13 @@ button {
 	margin-top: 20px;
 	border: 0px;
 	text-align: center;
+	width:100%;
 }
-.page-sidebar a.sidebar-button-color-blue:link{
-	background: #17c1c7 !important;
+.page-sidebar .sidebar-button:hover {
+	cursor:pointer;
 }
 
-.page-sidebar a.sidebar-button-gray:link{
+.page-sidebar .sidebar-button-gray{
 	display: block;
 	color: #fff;
 	font-weight: bold;
@@ -538,6 +535,10 @@ button {
 	margin-top: 20px;
 	border: 0px;
 	text-align: center;
+	width:100%;
+}
+.page-sidebar .sidebar-button-gray:hover {
+	cursor:pointer;
 }
 
 .page-sidebar ul.sidebar-blog-arhiva li a:link {
@@ -959,7 +960,7 @@ a.card-favorite.selected:visited {
 	color: #777;
 }
 
-/* User settings 
+/* User settings
 ***************************************************************/
 .settings .form-section-container {
     width: 100%;
@@ -1014,16 +1015,29 @@ a.card-favorite.selected:visited {
     background: #fff;
     border-bottom: solid 2px rgba(0, 0, 0, 0.2);
     border-top: solid 6px #f4715b;
-
     margin: 10px 10px 24px 10px;
     padding: 20px;
 }
 
-.top-border-color-blue {
+body div.supply section,body div.supply .page-sidebar {
 	border-top-color: #17c1c7 !important;
 }
-.color-blue {
+
+body div.supply .page-sidebar h3, body div.supply .sidebar-number,body div.supply .sidebar-number:before,body div.supply .sidebar-email:before{
 	color: #17c1c7 !important;
+}
+
+body div.supply button.sidebar-button {
+	background-color:#f4715b;
+}
+
+body div.demand button.sidebar-button {
+	background-color:#17c1c7 !important;
+}
+
+.page-content-wrapper.inner-page .page-content-container {
+    background: #fff;
+-   margin: 10px;
 }
 
 .page-content-wrapper.inner-page .page-sidebar {
@@ -1070,9 +1084,19 @@ a.card-favorite.selected:visited {
     color: #333;
     font-size: 16px;
     height: 44px;
+    line-height: normal;
     margin: 5px 0 0;
     padding: 0 20px;
     width: 210px;
+}
+
+.input-container input[type="text"]:focus,
+.input-container input[type="email"]:focus,
+.input-container input[type="number"]:focus,
+.input-container input[type="tel"]:focus,
+.input-container input[type="date"]:focus,
+.input-container input[type="password"]:focus {
+    background-color: #ddd;
 }
 
 .input-container input ~ .note {
@@ -1136,8 +1160,24 @@ a.card-favorite.selected:visited {
 }
 /* ADD PAGE */
 /***************************************************************/
+#addPage .page-content-wrapper.inner-page .page-sidebar{
+    float:right;
+}
+#addPage .page-content{
+    float:left;
+    width:620px;
+}
+#addPage .page-content-wrapper.inner-page .page-content-container,
+.page-content-wrapper.inner-page .page-sidebar {
+    background: #fff;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+    border-top: solid 6px #f4715b;
+
+}
 #addPage .page-sidebar{
     padding:20px;
+    width:250px;
+    margin-top:49px;
 }
 #addPage .page-sidebar .logo{
     display: block;
@@ -1148,7 +1188,12 @@ a.card-favorite.selected:visited {
     text-indent: -9999px;
     float: left;
 }
-
+#addPage .page-content-wrapper.inner-page .page-content-container {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    background: #fff;
+    margin: 10px 0 20px 0;
+    padding: 30px 60px;
+}
 #addPage .page-sidebar p{
     line-height:121%;
     font-size:110%;
@@ -1181,14 +1226,23 @@ a.card-favorite.selected:visited {
 #addPage .page-content-container .radio{
     display:none;
 }
-#addPage .page-content-container label{
-    background:url("../images/radio.png") no-repeat;
-    background-size: 10px 10px;
+#addPage .page-content-container #poklanjam, #trazim{
+    background:url("../images/circle_empty.png") no-repeat;
+    background-size: 20px 20px;
     background-position: left center;
-    padding-left:20px;
+    color:#999;
+    padding-left:25px;
     cursor:pointer;
     font-weight: bold;
     font-size:16px;
+}
+#addPage .page-content-container #poklanjam.field-radio-label-checked{
+    color:#f4715b;
+    background:url("../images/circle_red.png") no-repeat;
+}
+#addPage .page-content-container #trazim.field-radio-label-checked{
+    background:url("../images/circle_blue.png") no-repeat;
+    color:#17c1c7;
 }
 #addPage .page-content-container #trazim{
     margin-left:50px;
@@ -1201,6 +1255,7 @@ a.card-favorite.selected:visited {
     margin-top:35px;
 }
 #addPage .page-content-container #tekst{
+    color:#999;
     border:none;
     width:100%;
     height:90px;
@@ -1209,12 +1264,117 @@ a.card-favorite.selected:visited {
     border-bottom:1px solid #dddddd;
 }
 #addPage .page-content-container .inputArea{
-    margin-top:35px;
+    margin-top:25px;
+    float:left;
 }
-#addPage .page-content-container .inputArea{
+#addPage .page-content-container .inputArea .dropdownSelect{
     width:240px;
     height:45px;
+    margin-bottom:25px;
 }
+#addPage .page-content-container .inputArea .left{
+    float:left;
+}
+#addPage .page-content-container .inputArea label{
+    color:#999;
+    margin-bottom:5px;
+    font-size: 14px;
+}
+#addPage .page-content-container .inputArea .right{
+    position:relative;
+    margin:0 0 0 20px;
+    width:240px;
+    float:right;
+}
+#addPage .page-content-container .inputArea .right .uploadingImg{
+    position:absolute;
+    top:20px;
+    width:240px;
+    height:220px;
+    overflow: hidden;
+    cursor:pointer;
+}
+#addPage .page-content-container .inputArea .right .uploadingImg.haveImg .bck{
+    z-index:10;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url("../images/pic_del.png"), black;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display:none;
+}
+#addPage .page-content-container .inputArea .right .uploadingImg.haveImg:hover .bck{
+   opacity: .8;
+    display:block;
+}
+#addPage .page-content-container .inputArea .right #uploadPhotoBtn{
+    margin: 0 0 6px 0;
+    padding:0;
+    border:0;
+    width:100%;
+    height:220px;
+    background: url("../images/pic.png"), #eee;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+/*CHANGES FPR TRAZIM VIEW*/
+/**********************************************************/
+#addPage .trazim .page-sidebar{
+    border-top: solid 6px #17c1c7;
+}
+#addPage .trazim .page-sidebar .addButton{
+    background: #17c1c7;
+}
+#addPage .page-content-wrapper.inner-page.trazim .page-content-container{
+    border-top: solid 6px #17c1c7;
+}
+
+#addPage .page-content-container .inputArea .input-container > * {
+    display: block;
+    width: 240px;
+}
+#addPage .page-content-container .inputArea .input-container input {
+    width:200px;
+}
+#addPage .page-content-container .inputArea .input-container p{
+    margin-top:5px;
+    color:#008c00;
+    font-size:10px;
+}
+#addPage .nav-user > li:first-child {
+    margin-right: 20px;
+}
+
+.input-container {
+    color: #999;
+    font-size: 12px;
+    margin: 20px 0 25px;
+}
+
+.input-container > * {
+    display: block;
+    width: 250px;
+}
+
+.input-container .title {
+    font-size: 14px;
+}
+
+.input-container input {
+    background: #eee;
+    border: 0;
+    color: #333;
+    font-size: 16px;
+    height: 44px;
+    padding: 0 20px;
+    width: 210px;
+}
+
 /* CUSTOM DROP DOWNS! */
 /***************************************************************/
 .dropdownSelect {
@@ -1255,7 +1415,8 @@ a.card-favorite.selected:visited {
     top: 100%;
     left: 0;
     right: 0;
-
+    z-index: 9999;
+    max-height:200px;
     /* Styles */
     background: #eeeeee;
     list-style: none;
@@ -1264,6 +1425,7 @@ a.card-favorite.selected:visited {
     /* Hiding */
     opacity: 0;
     pointer-events: none;
+    overflow-y: scroll;
 }
 
 .dropdownSelect .dropdown li a {
@@ -1485,6 +1647,90 @@ span.form-label{
     font-weight: bold;
 }
 
+
+
+
+
+
+
+/*NASA PRICA */
+/***************************************************************/
+#nasaPrica .page-container{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position:relative;
+    top:125px;
+    width:945px;
+    margin:0 auto;
+    background:white;
+    border-top:6px solid #f4715b;
+    padding:40px 80px;
+    color:#777;
+}
+#nasaPrica .page-container h2{
+    font-size: 24px;
+}
+#nasaPrica .page-container p{
+    font-size:18px;
+    line-height: 24px;
+    margin-bottom:15px;
+}
+#nasaPrica .page-container img{
+    margin:30px 0;
+}
+#nasaPrica .page-container a{
+    color:#f4715b;
+}
+#nasaPrica .page-container a:hover{
+    text-decoration: underline;
+}
+#nasaPrica .page-contant{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position:relative;
+    top:170px;
+    width:945px;
+    margin:0 auto;
+    color:#777;
+}
+#nasaPrica .page-contant{
+    margin-bottom: 40px;
+}
+#nasaPrica .page-contant .box{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width:450px;
+    height:400px;
+    float:left;
+    background:white;
+    padding:80px;
+    margin-bottom: 220px;
+}
+#nasaPrica .page-contant .box h3{
+    font-size:34px;
+    color:#f4715b;
+    margin-bottom:10px;
+}
+#nasaPrica .page-contant .box p{
+    font-size: 18px;
+}
+#nasaPrica .page-contant .trazim{
+    border-top:6px solid #f4715b;
+}
+#nasaPrica .page-contant .poklanjam{
+    border-top:6px solid #10c1c7;
+    float:right;
+}
+#nasaPrica .page-contant .poklanjam h3{
+    color:#10c1c7;
+}
+#nasaPrica h2.u-izradi {
+    margin-bottom: 2em;
+}
+
 /* RWD Part */
 /***************************************************************/
 @media only screen and (min-width:1280px) {
@@ -1529,7 +1775,7 @@ span.form-label{
    width: 240px;
 }
 
-/* User settings 
+/* User settings
 ***************************************************************/
 .settings form {
     margin: 20px 0;
@@ -1542,6 +1788,15 @@ span.form-label{
 .settings .form-section-container .fieldset {
     display: table-cell;
     width: 50%;
+}
+#addPage .page-content{
+    margin-left:115px;
+}
+#addPage .page-content-wrapper.inner-page{
+    width:1050px;
+}
+#addPage .page-content-wrapper.inner-page .page-content-container {
+    padding: 30px 40px;
 }
 
 }

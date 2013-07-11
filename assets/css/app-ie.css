@@ -6,6 +6,15 @@
 
 /* Forms */
 /**************************************************************/
+.input-container input[type="text"],
+.input-container input[type="email"],
+.input-container input[type="number"],
+.input-container input[type="tel"],
+.input-container input[type="date"],
+.input-container input[type="password"] {
+	line-height: 44px;
+}
+
 .input-container input ~ .note {
 	visibility: hidden;
 }

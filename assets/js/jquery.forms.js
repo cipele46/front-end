@@ -22,8 +22,7 @@ $("input[type=checkbox], input[type=radio]").checkBox(); // Replace all checkbox
 				fieldType = $field.attr('type'),
 				fieldId = $field.attr('id'),
 				checkedClass = "field-" + fieldType + "-label-checked",
-				$textInput = $label.children("input");
-						
+				$textInput = $label.children("input");		
 			if($field.is(':checked')) {
 				$label.addClass(checkedClass);
 			};
@@ -45,8 +44,11 @@ $("input[type=checkbox], input[type=radio]").checkBox(); // Replace all checkbox
             		});
             		
             		$label.addClass(checkedClass);
-            		console.log($( this ).attr("id"));
-            		console.log("Change view!");
+            		if( $( this ).attr("id") === "trazim"){
+            			$(".page-content-wrapper").addClass("trazim");
+            		}else{
+						$(".page-content-wrapper").removeClass("trazim");
+            		}
             	}
             });
             
