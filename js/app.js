@@ -10,15 +10,16 @@ var app = (function($, window, document, undefined) {
 	var _cardBoardInit = function() {
 
         $("article.card").on("click", function(event){
-            event.preventDefault();
 
             var $eventTarget = $(event.target);
 
             if($eventTarget.is("a.card-favorite")) {
+                event.preventDefault();
                 handleCardFavorites($(this), $eventTarget);
             }
-            else {
-               window.location = $(this).data().details;
+            else if (!$eventTarget.is("a") && $(this).data().details) {
+                event.preventDefault();
+                window.location = $(this).data().details;
             }
         });
 
